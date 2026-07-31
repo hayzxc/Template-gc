@@ -28,3 +28,11 @@ prisma-dev.log
 *.pem
 .vscode/
 .idea/
+
+# Excluded templates and AI agent configs
+_template_gc/
+_template_gc.zip
+Template GC.docx
+.agents/
+.claude/
+.windsurf/
