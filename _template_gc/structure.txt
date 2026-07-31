@@ -1,0 +1,92 @@
+﻿P{indL=122} ::  
+P{} ::  
+=== SECTION BREAK cols:  ===
+P{BodyText} ::  
+P{Heading1} :: []SERTIFIKAT | []  | []BEBAS | []  | []GAS 
+P{center indL=2857} :: [Arial,14,i]GAS | [Arial,14,i]  | [Arial,14,i]CLEARANCE | [Arial,14,i]  | [Arial,14,i]CERTIFICATE 
+P{BodyText right indR=1 before=43 line=129} :: <COLBREAK> | []Nomor | []  | []Registrasi 
+P{indL=122} :: [Arial,12,i]Registration  | [Arial,12,i]Number 
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText right} :: []Tanggal 
+P{indL=219} :: [Arial,12,i]Date  | [Arial,12,i](dd/mm/ | [Arial,12,i]yyyy | [Arial,12,i]) 
+P{indL=107 before=103} :: <COLBREAK> | [12]: | [12]  | [12]ID0018MB | [12]  
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText indL=111} :: [none]: | [none,Style2]  | [PlaceholderText]Click or tap here to enter text. | [none]  <SDT-PLACEHOLDER>
+P{BodyText} ::  
+=== SECTION BREAK cols: + / + / + ===
+P{BodyText} ::  
+P{Heading2} :: []Kepada | []  | []pihak-pihak | [] yang  | []berkepentingan 
+P{Heading3} :: []To | []  | []whom | []  | []it | []  | []may | []  | []concern 
+P{BodyText} ::  
+P{BodyText indL=121} :: []Saya  | []sebagai | []  | []penanggungjawab | []  | []fumigasi | [] di  | []bawah | []  | []ini | []: 
+P{indL=121} :: [Arial,12,i]I, being the person-in-charge of the fumigation of the  | [Arial,12,i]following: 
+P{BodyText} ::  
+P{BodyText} ::  
+=== SECTION BREAK cols:  ===
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText indL=167} :: []Nama  | []komoditas | []/media  | []pembawa | []                                              
+P{indL=167} :: [Arial,12,i]Commodity/article 
+P{indL=366 before=96 line=129} :: <COLBREAK> 
+P{indL=366} :: [PlaceholderText]Click or tap here to enter text. | [12]  | [12]: | [12]: | [12]  <SDT-PLACEHOLDER>
+P{[TXBX]} :: [12]: 
+P{} ::  
+=== SECTION BREAK cols: + / + ===
+P{BodyText indL=167 before=91 line=129} :: []Nomor | []  | []peti | []  | [none]kemas 
+P{indL=167} :: [Arial,12,i]Container  | [Arial,12,i]number 
+P{BodyText indL=167 before=87 line=129} :: []Alat  | []angkut 
+P{indL=167} :: [Arial,12,i]Carrier/vessel 
+P{BodyText indL=167 before=87 line=129} :: []Area / Lokasi  | []fumigasi 
+P{indL=167} :: [Arial,12,i]Area/Location of  | [Arial,12,i]Fumigation 
+P{BodyText indL=167 before=87 line=129} :: []Fumigan | [] yang  | []digunakan 
+P{indL=167} :: [Arial,12,i]Fumigant 
+P{BodyText indL=167 before=87 line=129} :: []Waktu | []  | []dimulainya | []  | []fumigasi 
+P{indL=167} :: [Arial,12,i]Commencing at (dd/mm/ | [Arial,12,i]yyyy | [Arial,12,i]  | [12]â€“  | [Arial,12,i]HH:MM) 
+P{BodyText indL=167 before=102 line=129} :: []Waktu | []  | []selesainya | []  | []fumigasi 
+P{indL=167} :: [Arial,12,i]Completed at (dd/mm/ | [Arial,12,i]yyyy | [Arial,12,i]  | [12]â€“  | [Arial,12,i]HH:MM) 
+P{BodyText} :: <COLBREAK> 
+P{indL=167 before=1} :: [12]: | [12]   | [PlaceholderText]Click or tap here to enter text. <SDT-PLACEHOLDER>
+P{BodyText} ::  
+P{indL=167 before=1} :: [12]: | [12]   | [PlaceholderText]Click or tap here to enter text. <SDT-PLACEHOLDER>
+P{BodyText} ::  
+P{BodyText indL=167 before=1} :: [none]: | [none]   | [none,PlaceholderText]Click or tap here to enter text. <SDT-PLACEHOLDER>
+P{BodyText} ::  
+P{BodyText indL=167} :: [none]: | [none]   | [none,PlaceholderText]Click or tap here to enter text. <SDT-PLACEHOLDER>
+P{BodyText} ::  
+P{BodyText indL=167} :: [none]: | [none]   | [none,PlaceholderText]Click or tap to enter a date. <SDT-PLACEHOLDER>
+P{BodyText} ::  
+P{BodyText indL=167} :: [none]: | [none]   | [i,none,PlaceholderText]Click or tap to enter a date. <SDT-PLACEHOLDER>
+P{BodyText} ::  
+=== SECTION BREAK cols: + / + ===
+P{BodyText} ::  
+P{BodyText indL=121} :: []Bersama | []  | []ini | []  | []menyatakan | []  | []bahwa | []  | []tempat | [], | []  | []peti | []  | []kemas | []  | []dan | []  | []komoditas | []/media | []  | []pembawa | []  | []tersebut | []  | []di | []  | []atas | []  | []telah | []  | []bebas | []  | []dari | []  | []konsentrasi | []  | []gas | []  | []yang | [none]  | []membahayakan | []. 
+P{indL=121} :: [Arial,12,i]Hereby declare that the area, container and the commodity/article mentioned above is free from harmful concentration of the  | [Arial,12,i]gas. 
+P{BodyText} ::  
+P{BodyText indL=121} :: []Saya  | []membuat | []  | []pernyataan | []  | []ini | []  | []setelah | []  | []memeriksa | []  | []konsentrasi | [] gas di area  | []serta | []  | []ruangan | []  | []fumigasi | []. 
+P{indL=121} :: [Arial,12,i]I make this declaration after having examined the gas levels in the area and the fumigation  | [Arial,12,i]workspace. 
+P{} ::  
+=== SECTION BREAK cols:  ===
+P{BodyText indL=1333 before=42 line=129} :: []Konsentrasi | [] gas  | []setelah | []  | []penganginan 
+P{indL=1921} :: [Arial,12,i]Gas levels after  | [Arial,12,i]fumigation 
+P{BodyText indL=125 before=102} :: <COLBREAK> | [none]: | [none]   | [none]  | [none]ppm 
+P{BodyText} ::  
+=== SECTION BREAK cols: + / + ===
+P{BodyText} ::  
+P{BodyText} ::  
+P{BodyText indL=6214} :: []Pelaksana | []  | []Fumigasi, 
+P{indL=6214} :: [Arial,12,i]Fumigation  | [Arial,12,i]company 
+P{BodyText} ::  
+P{indL=532} ::  
+P{} ::  
+=== SECTION BREAK cols:  ===
+P{BodyText center indL=3143 before=79 line=129} :: []Cap Perusahaan  | []Fumigasi* 
+P{center indL=3143} :: [Arial,12,i]S | [Arial,12,i]tamp of  | [Arial,12,i]company* 
+P{BodyText center indL=373 before=79 line=129} :: <COLBREAK> | [PlaceholderText]Click or tap here to enter text. <SDT-PLACEHOLDER>
+P{center indL=373} :: [Arial,12,i]Signature and name of  | [Arial,12,i]fumigator 
+

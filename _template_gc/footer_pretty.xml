@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:ftr xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink" xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:oel="http://schemas.microsoft.com/office/2019/extlst" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cei="http://schemas.microsoft.com/office/word/2026/wordml/cei" xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml" xmlns:w16du="http://schemas.microsoft.com/office/word/2023/wordml/word16du" xmlns:w16sdtdh="http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash" xmlns:w16sdtfl="http://schemas.microsoft.com/office/word/2024/wordml/sdtformatlock" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" mc:Ignorable="w14 w15 w16se w16cid w16 w16cex w16sdtdh w16sdtfl w16du wp14">
+<w:p w14:paraId="1347AEF4" w14:textId="77777777" w:rsidR="0012435F" w:rsidRDefault="00000000">
+<w:pPr>
+<w:pStyle w:val="BodyText"/>
+<w:spacing w:line="14" w:lineRule="auto"/>
+<w:rPr>
+<w:sz w:val="20"/>
+<w:u w:val="none"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:noProof/>
+<w:sz w:val="20"/>
+</w:rPr>
+<mc:AlternateContent>
+<mc:Choice Requires="wps">
+<w:drawing>
+<wp:anchor distT="0" distB="0" distL="0" distR="0" simplePos="0" relativeHeight="487513600" behindDoc="1" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="256FBE41" wp14:editId="4AE28626">
+<wp:simplePos x="0" y="0"/>
+<wp:positionH relativeFrom="page">
+<wp:posOffset>257174</wp:posOffset>
+</wp:positionH>
+<wp:positionV relativeFrom="page">
+<wp:posOffset>6886574</wp:posOffset>
+</wp:positionV>
+<wp:extent cx="4829175" cy="9525"/>
+<wp:effectExtent l="0" t="0" r="0" b="0"/>
+<wp:wrapNone/>
+<wp:docPr id="1" name="Graphic 1"/>
+<wp:cNvGraphicFramePr>
+<a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+</wp:cNvGraphicFramePr>
+<a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+<a:graphicData uri="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+<wps:wsp>
+<wps:cNvSpPr>
+<a:spLocks/>
+</wps:cNvSpPr>
+<wps:spPr>
+<a:xfrm>
+<a:off x="0" y="0"/>
+<a:ext cx="4829175" cy="9525"/>
+</a:xfrm>
+<a:custGeom>
+<a:avLst/>
+<a:gdLst/>
+<a:ahLst/>
+<a:cxnLst/>
+<a:rect l="l" t="t" r="r" b="b"/>
+<a:pathLst>
+<a:path w="4829175" h="9525">
+<a:moveTo>
+<a:pt x="4829174" y="9524"/>
+</a:moveTo>
+<a:lnTo>
+<a:pt x="0" y="9524"/>
+</a:lnTo>
+<a:lnTo>
+<a:pt x="0" y="0"/>
+</a:lnTo>
+<a:lnTo>
+<a:pt x="4829174" y="0"/>
+</a:lnTo>
+<a:lnTo>
+<a:pt x="4829174" y="9524"/>
+</a:lnTo>
+<a:close/>
+</a:path>
+</a:pathLst>
+</a:custGeom>
+<a:solidFill>
+<a:srgbClr val="000000"/>
+</a:solidFill>
+</wps:spPr>
+<wps:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0">
+<a:prstTxWarp prst="textNoShape">
+<a:avLst/>
+</a:prstTxWarp>
+<a:noAutofit/>
+</wps:bodyPr>
+</wps:wsp>
+</a:graphicData>
+</a:graphic>
+</wp:anchor>
+</w:drawing>
+</mc:Choice>
+<mc:Fallback>
+<w:pict>
+<v:shape w14:anchorId="6F4703EC" id="Graphic 1" o:spid="_x0000_s1026" style="position:absolute;margin-left:20.25pt;margin-top:542.25pt;width:380.25pt;height:.75pt;z-index:-15802880;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;mso-position-horizontal-relative:page;mso-position-vertical:absolute;mso-position-vertical-relative:page;v-text-anchor:top" coordsize="4829175,9525" o:gfxdata="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&#xA;LnhtbFBLBQYAAAAABAAEAPMAAACGBQAAAAA=&#xA;" path="m4829174,9524l,9524,,,4829174,r,9524xe" fillcolor="black" stroked="f">
+<v:path arrowok="t"/>
+<w10:wrap anchorx="page" anchory="page"/>
+</v:shape>
+</w:pict>
+</mc:Fallback>
+</mc:AlternateContent>
+</w:r>
+<w:r>
+<w:rPr>
+<w:noProof/>
+<w:sz w:val="20"/>
+</w:rPr>
+<mc:AlternateContent>
+<mc:Choice Requires="wps">
+<w:drawing>
+<wp:anchor distT="0" distB="0" distL="0" distR="0" simplePos="0" relativeHeight="487514112" behindDoc="1" locked="0" layoutInCell="1" allowOverlap="1" wp14:anchorId="6F414508" wp14:editId="36022CF5">
+<wp:simplePos x="0" y="0"/>
+<wp:positionH relativeFrom="page">
+<wp:posOffset>283170</wp:posOffset>
+</wp:positionH>
+<wp:positionV relativeFrom="page">
+<wp:posOffset>6902172</wp:posOffset>
+</wp:positionV>
+<wp:extent cx="4253230" cy="163830"/>
+<wp:effectExtent l="0" t="0" r="0" b="0"/>
+<wp:wrapNone/>
+<wp:docPr id="2" name="Textbox 2"/>
+<wp:cNvGraphicFramePr>
+<a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"/>
+</wp:cNvGraphicFramePr>
+<a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+<a:graphicData uri="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
+<wps:wsp>
+<wps:cNvSpPr txBox="1">
+<a:spLocks/>
+</wps:cNvSpPr>
+<wps:spPr>
+<a:xfrm>
+<a:off x="0" y="0"/>
+<a:ext cx="4253230" cy="163830"/>
+</a:xfrm>
+<a:prstGeom prst="rect">
+<a:avLst/>
+</a:prstGeom>
+</wps:spPr>
+<wps:txbx>
+<w:txbxContent>
+<w:p w14:paraId="5989D8F1" w14:textId="77777777" w:rsidR="0012435F" w:rsidRDefault="00000000">
+<w:pPr>
+<w:spacing w:before="15" w:line="111" w:lineRule="exact"/>
+<w:ind w:left="20"/>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:sz w:val="10"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>Printed</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="7"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>digitally</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="8"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>through:</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-8"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>FUMI</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-6"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>TRUST by</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-9"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>BARANTIN.</w:t>
+</w:r>
+</w:p>
+<w:p w14:paraId="18547F94" w14:textId="77777777" w:rsidR="0012435F" w:rsidRDefault="00000000">
+<w:pPr>
+<w:spacing w:line="111" w:lineRule="exact"/>
+<w:ind w:left="20"/>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:sz w:val="10"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>The</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>authenticity</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>of</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>this</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>document</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>can</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>be</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>verified</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>through</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>the</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:proofErr w:type="spellStart"/>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>QRcode</w:t>
+</w:r>
+<w:proofErr w:type="spellEnd"/>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>above</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>or</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>via</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>the</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>following</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>link:</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:hyperlink r:id="rId1">
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:color w:val="0000ED"/>
+<w:sz w:val="10"/>
+<w:u w:val="single" w:color="0000ED"/>
+</w:rPr>
+<w:t>GC-1785134220-99ab6a2f-ID0018MB-</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:color w:val="0000ED"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+<w:u w:val="single" w:color="0000ED"/>
+</w:rPr>
+<w:t>20260727</w:t>
+</w:r>
+</w:hyperlink>
+</w:p>
+</w:txbxContent>
+</wps:txbx>
+<wps:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" rtlCol="0">
+<a:noAutofit/>
+</wps:bodyPr>
+</wps:wsp>
+</a:graphicData>
+</a:graphic>
+</wp:anchor>
+</w:drawing>
+</mc:Choice>
+<mc:Fallback>
+<w:pict>
+<v:shapetype w14:anchorId="6F414508" id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+<v:stroke joinstyle="miter"/>
+<v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype>
+<v:shape id="Textbox 2" o:spid="_x0000_s1027" type="#_x0000_t202" style="position:absolute;margin-left:22.3pt;margin-top:543.5pt;width:334.9pt;height:12.9pt;z-index:-15802368;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;mso-position-horizontal:absolute;mso-position-horizontal-relative:page;mso-position-vertical:absolute;mso-position-vertical-relative:page;v-text-anchor:top" o:gfxdata="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&#xA;" filled="f" stroked="f">
+<v:textbox inset="0,0,0,0">
+<w:txbxContent>
+<w:p w14:paraId="5989D8F1" w14:textId="77777777" w:rsidR="0012435F" w:rsidRDefault="00000000">
+<w:pPr>
+<w:spacing w:before="15" w:line="111" w:lineRule="exact"/>
+<w:ind w:left="20"/>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:sz w:val="10"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>Printed</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="7"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>digitally</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="8"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>through:</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-8"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>FUMI</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-6"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>TRUST by</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-9"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>BARANTIN.</w:t>
+</w:r>
+</w:p>
+<w:p w14:paraId="18547F94" w14:textId="77777777" w:rsidR="0012435F" w:rsidRDefault="00000000">
+<w:pPr>
+<w:spacing w:line="111" w:lineRule="exact"/>
+<w:ind w:left="20"/>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:sz w:val="10"/>
+</w:rPr>
+</w:pPr>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>The</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>authenticity</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>of</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>this</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>document</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>can</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>be</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>verified</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>through</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>the</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:proofErr w:type="spellStart"/>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>QRcode</w:t>
+</w:r>
+<w:proofErr w:type="spellEnd"/>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>above</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>or</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>via</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>the</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>following</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-3"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t>link:</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+</w:rPr>
+<w:t xml:space="preserve"> </w:t>
+</w:r>
+<w:hyperlink r:id="rId2">
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:color w:val="0000ED"/>
+<w:sz w:val="10"/>
+<w:u w:val="single" w:color="0000ED"/>
+</w:rPr>
+<w:t>GC-1785134220-99ab6a2f-ID0018MB-</w:t>
+</w:r>
+<w:r>
+<w:rPr>
+<w:rFonts w:ascii="Cambria"/>
+<w:color w:val="0000ED"/>
+<w:spacing w:val="-2"/>
+<w:sz w:val="10"/>
+<w:u w:val="single" w:color="0000ED"/>
+</w:rPr>
+<w:t>20260727</w:t>
+</w:r>
+</w:hyperlink>
+</w:p>
+</w:txbxContent>
+</v:textbox>
+<w10:wrap anchorx="page" anchory="page"/>
+</v:shape>
+</w:pict>
+</mc:Fallback>
+</mc:AlternateContent>
+</w:r>
+</w:p>
+</w:ftr>
