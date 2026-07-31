@@ -16,7 +16,11 @@ export async function GET() {
     });
     return NextResponse.json(certificates);
   } catch (error) {
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    console.error("GET /api/certificates error:", error);
+    return NextResponse.json(
+      { error: "Database connection error or missing DATABASE_URL on Vercel" },
+      { status: 500 }
+    );
   }
 }
 

@@ -15,19 +15,47 @@ interface Draft {
 export function DraftsList() {
   const [drafts, setDrafts] = useState<Draft[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/certificates")
-      .then((res) => res.json())
+      .then(async (res) => {
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}));
+          throw new Error(errData.error || `Server responded with ${res.status}`);
+        }
+        return res.json();
+      })
       .then((data) => {
-        setDrafts(data);
+        if (Array.isArray(data)) {
+          setDrafts(data);
+        } else {
+          setDrafts([]);
+        }
         setIsLoading(false);
       })
-      .catch(() => setIsLoading(false));
+      .catch((err) => {
+        console.error("Error loading drafts:", err);
+        setErrorMessage(err.message || "Failed to load drafts");
+        setDrafts([]);
+        setIsLoading(false);
+      });
   }, []);
 
   if (isLoading) {
     return <div className="p-4 text-gray-500">Loading drafts...</div>;
+  }
+
+  if (errorMessage) {
+    return (
+      <div className="p-4 text-red-600 bg-red-50 border border-red-200 rounded-md">
+        <p className="font-semibold">Error loading certificate drafts:</p>
+        <p className="text-sm mt-1">{errorMessage}</p>
+        <p className="text-xs text-gray-500 mt-2">
+          Make sure your database connection string (DATABASE_URL) is set up in Vercel environment variables.
+        </p>
+      </div>
+    );
   }
 
   if (drafts.length === 0) {
