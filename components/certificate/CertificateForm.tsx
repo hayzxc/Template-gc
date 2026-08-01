@@ -24,7 +24,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm<CertificateInput>({
+  } = useForm({
     resolver: zodResolver(certificateSchema),
     defaultValues: initialValues || {
       certificateDate: new Date(),
@@ -32,8 +32,8 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
       containerNumber: "",
       carrierVessel: "",
       fumigationArea: "",
-      commencingAt: new Date(),
-      completedAt: new Date(),
+      commencingAt: undefined,
+      completedAt: undefined,
       gasLevelPpm: 0,
       fumigatorName: "",
       fumigatorSignatureUrl: "",
@@ -49,15 +49,17 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
     }
   }, [watch, onChange]);
 
-  const formatDateForInput = (d?: Date | string) => {
+  const formatDateForInput = (d?: Date | string | null) => {
     if (!d) return "";
     const date = new Date(d);
+    if (isNaN(date.getTime())) return "";
     return date.toISOString().split("T")[0];
   };
 
-  const formatDateTimeForInput = (d?: Date | string) => {
+  const formatDateTimeForInput = (d?: Date | string | null) => {
     if (!d) return "";
     const date = new Date(d);
+    if (isNaN(date.getTime())) return "";
     return date.toISOString().slice(0, 16);
   };
 
@@ -137,7 +139,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block font-medium text-gray-700">Waktu Dimulai / Commencing At *</label>
+          <label className="block font-medium text-gray-700">Waktu Dimulai / Commencing At</label>
           <input
             type="datetime-local"
             defaultValue={formatDateTimeForInput(initialValues?.commencingAt)}
@@ -147,7 +149,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
           {errors.commencingAt && <p className="text-red-500 text-xs mt-1">{errors.commencingAt.message}</p>}
         </div>
         <div>
-          <label className="block font-medium text-gray-700">Waktu Selesai / Completed At *</label>
+          <label className="block font-medium text-gray-700">Waktu Selesai / Completed At</label>
           <input
             type="datetime-local"
             defaultValue={formatDateTimeForInput(initialValues?.completedAt)}

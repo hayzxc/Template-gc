@@ -4,7 +4,6 @@ import React from "react";
 import { format } from "date-fns";
 import { CERTIFICATE_CONSTANTS } from "@/lib/certificate-constants";
 import { CERTIFICATE_STATIC_TEXT as TEXT, CERTIFICATE_FIELD_LABELS as FIELD } from "@/lib/certificate-static-text";
-import { QR_IMAGE_DATA_URI } from "@/lib/certificate-assets";
 import type { CertificateInput } from "@/lib/certificate-schema";
 
 interface CertificateLivePreviewProps {
@@ -13,9 +12,10 @@ interface CertificateLivePreviewProps {
   stampUrl?: string;
 }
 
-const safeFormatDate = (d: Date | string, fmtStr: string) => {
+const safeFormatDate = (d: Date | string | null | undefined, fmtStr: string) => {
   try {
-    const dateObj = d instanceof Date ? d : new Date(String(d ?? ""));
+    if (!d) return "";
+    const dateObj = d instanceof Date ? d : new Date(String(d));
     if (isNaN(dateObj.getTime())) return "";
     return format(dateObj, fmtStr);
   } catch {
@@ -133,8 +133,8 @@ export const CertificateLivePreview: React.FC<CertificateLivePreviewProps> = ({
 
         {/* Bottom Stamp + Signature Band */}
         <div className="mt-[6pt] relative h-[52px] flex items-end justify-between px-2">
-          {/* QR */}
-          <img src={QR_IMAGE_DATA_URI} alt="QR" className="w-[48px] h-[48px] object-contain" />
+          {/* Spacer */}
+          <div className="w-[48px] h-[48px]" />
 
           {/* Stamp */}
           <div className="text-center w-[100px] relative">

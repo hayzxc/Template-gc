@@ -28,6 +28,12 @@ const toDate = (v: unknown): Date => {
     return isNaN(d.getTime()) ? new Date() : d;
 };
 
+const toNullableDate = (v: unknown): Date | null => {
+    if (!v) return null;
+    const d = v instanceof Date ? v : new Date(String(v));
+    return isNaN(d.getTime()) ? null : d;
+};
+
 // The form emits partial/in-progress values while the user types; coerce them
 // into the validated shape CertificateDocument expects so the preview never crashes.
 const toPreviewData = (data: Partial<CertificateInput>): CertificateInput => ({
@@ -36,8 +42,8 @@ const toPreviewData = (data: Partial<CertificateInput>): CertificateInput => ({
     containerNumber: data.containerNumber || "",
     carrierVessel: data.carrierVessel || "",
     fumigationArea: data.fumigationArea || "",
-    commencingAt: toDate(data.commencingAt),
-    completedAt: toDate(data.completedAt),
+    commencingAt: toNullableDate(data.commencingAt),
+    completedAt: toNullableDate(data.completedAt),
     gasLevelPpm: Number(data.gasLevelPpm) || 0,
     fumigatorName: data.fumigatorName || "",
     fumigatorSignatureUrl: data.fumigatorSignatureUrl || undefined,

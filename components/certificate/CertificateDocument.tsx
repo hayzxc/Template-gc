@@ -4,7 +4,6 @@ import { format } from "date-fns";
 import { PAGE, FONTS, FONT_SIZES, LINE_HEIGHTS, IMAGE_SIZES, LAYOUT } from "@/lib/certificate-tokens";
 import { CERTIFICATE_CONSTANTS } from "@/lib/certificate-constants";
 import { CERTIFICATE_STATIC_TEXT as TEXT, CERTIFICATE_FIELD_LABELS as FIELD } from "@/lib/certificate-static-text";
-import { QR_IMAGE_DATA_URI } from "@/lib/certificate-assets";
 import { BilingualField } from "./BilingualField";
 import type { CertificateInput } from "@/lib/certificate-schema";
 
@@ -200,7 +199,12 @@ interface CertificateDocumentProps {
 }
 
 export const CertificateDocument: React.FC<CertificateDocumentProps> = ({ data, logoUrl, stampUrl }) => {
-  const dateTime = (d: Date | string) => format(new Date(d), "dd/MM/yyyy \u2013 HH:mm");
+  const dateTime = (d?: Date | string | null) => {
+    if (!d) return "";
+    const dateObj = d instanceof Date ? d : new Date(String(d));
+    if (isNaN(dateObj.getTime())) return "";
+    return format(dateObj, "dd/MM/yyyy \u2013 HH:mm");
+  };
 
   return (
     <Document>
@@ -296,9 +300,8 @@ export const CertificateDocument: React.FC<CertificateDocumentProps> = ({ data, 
           <Text style={styles.enText}>{TEXT.signerLabelEn}</Text>
         </View>
 
-        {/* QR + stamp + signature */}
+        {/* Stamp + signature */}
         <View style={styles.bottomBand}>
-          <Image src={QR_IMAGE_DATA_URI} style={styles.qr} />
           {stampUrl && <Image src={stampUrl} style={styles.stampImage} />}
           {data.fumigatorSignatureUrl ? (
             <Image src={data.fumigatorSignatureUrl} style={styles.signatureImage} />
