@@ -94,7 +94,7 @@ export function DraftsList() {
                 {draft.containerNumber}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-gray-500">
-                {format(new Date(draft.certificateDate), "dd/MM/yyyy")}
+                {draft.certificateDate ? format(new Date(draft.certificateDate), "dd/MM/yyyy") : "-"}
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-gray-500">
                 {format(new Date(draft.updatedAt), "dd/MM/yyyy HH:mm")}

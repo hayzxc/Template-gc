@@ -43,7 +43,7 @@ const toNullableNumber = (v: unknown): number | null => {
 // The form emits partial/in-progress values while the user types; coerce them
 // into the validated shape CertificateDocument expects so the preview never crashes.
 const toPreviewData = (data: Partial<CertificateInput>): CertificateInput => ({
-    certificateDate: toDate(data.certificateDate),
+    certificateDate: toNullableDate(data.certificateDate),
     commodity: data.commodity || "",
     containerNumber: data.containerNumber || "",
     carrierVessel: data.carrierVessel || "",

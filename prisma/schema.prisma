@@ -20,7 +20,7 @@ model User {
 
 model GasClearanceCertificate {
   id                     String   @id @default(cuid())
-  certificateDate        DateTime
+  certificateDate        DateTime?
   commodity              String
   containerNumber        String
   carrierVessel          String

@@ -27,7 +27,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
   } = useForm({
     resolver: zodResolver(certificateSchema),
     defaultValues: initialValues || {
-      certificateDate: new Date(),
+      certificateDate: undefined,
       commodity: "",
       containerNumber: "",
       carrierVessel: "",
@@ -87,7 +87,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
       </div>
 
       <div>
-        <label className="block font-medium text-gray-700">Tanggal / Date *</label>
+        <label className="block font-medium text-gray-700">Tanggal / Date</label>
         <input
           type="date"
           defaultValue={formatDateForInput(initialValues?.certificateDate)}

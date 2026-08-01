@@ -17,7 +17,7 @@ const optionalNumber = z
   });
 
 export const baseCertificateSchema = z.object({
-  certificateDate: z.coerce.date(),
+  certificateDate: optionalDate,
   commodity: z.string().min(1).max(1000),
   containerNumber: z.string().min(1).max(1000),
   carrierVessel: z.string().min(1).max(1000),

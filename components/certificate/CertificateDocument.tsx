@@ -206,6 +206,13 @@ export const CertificateDocument: React.FC<CertificateDocumentProps> = ({ data, 
     return format(dateObj, "dd/MM/yyyy \u2013 HH:mm");
   };
 
+  const dateOnly = (d?: Date | string | null) => {
+    if (!d) return "";
+    const dateObj = d instanceof Date ? d : new Date(String(d));
+    if (isNaN(dateObj.getTime())) return "";
+    return format(dateObj, "dd/MM/yyyy");
+  };
+
   return (
     <Document>
       <Page size={PAGE.size} style={styles.page} wrap={false}>
@@ -227,7 +234,7 @@ export const CertificateDocument: React.FC<CertificateDocumentProps> = ({ data, 
             <Text style={[styles.idText, styles.regLabelId]}>{TEXT.dateLabelId}</Text>
             <Text style={[styles.enText, styles.dateLabelEn]}>{TEXT.dateLabelEn}</Text>
           </View>
-          <Text style={styles.dateValue}>: {format(new Date(data.certificateDate), "dd/MM/yyyy")}</Text>
+          <Text style={styles.dateValue}>: {dateOnly(data.certificateDate)}</Text>
         </View>
 
         {/* Headings */}
