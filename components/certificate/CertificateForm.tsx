@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { certificateSchema, CertificateInput } from "@/lib/certificate-schema";
@@ -13,6 +14,8 @@ interface CertificateFormProps {
   isLoading?: boolean;
 }
 
+type CertificateFormValues = z.input<typeof certificateSchema>;
+
 export const CertificateForm: React.FC<CertificateFormProps> = ({
   initialValues,
   onSubmit,
@@ -24,19 +27,19 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
     handleSubmit,
     watch,
     formState: { errors },
-  } = useForm({
+  } = useForm<CertificateFormValues, any, CertificateInput>({
     resolver: zodResolver(certificateSchema),
-    defaultValues: initialValues || {
-      certificateDate: undefined,
-      commodity: "",
-      containerNumber: "",
-      carrierVessel: "",
-      fumigationArea: "",
-      commencingAt: undefined,
-      completedAt: undefined,
-      gasLevelPpm: undefined,
-      fumigatorName: "",
-      fumigatorSignatureUrl: "",
+    defaultValues: {
+      certificateDate: initialValues?.certificateDate ?? undefined,
+      commodity: initialValues?.commodity ?? "",
+      containerNumber: initialValues?.containerNumber ?? "",
+      carrierVessel: initialValues?.carrierVessel ?? "",
+      fumigationArea: initialValues?.fumigationArea ?? "",
+      commencingAt: initialValues?.commencingAt ?? undefined,
+      completedAt: initialValues?.completedAt ?? undefined,
+      gasLevelPpm: initialValues?.gasLevelPpm ?? undefined,
+      fumigatorName: initialValues?.fumigatorName ?? "",
+      fumigatorSignatureUrl: initialValues?.fumigatorSignatureUrl ?? "",
     },
   });
 
