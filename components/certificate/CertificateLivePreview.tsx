@@ -122,7 +122,7 @@ export const CertificateLivePreview: React.FC<CertificateLivePreviewProps> = ({
             <div className="underline">{TEXT.gasLabelId}</div>
             <div className="italic">{TEXT.gasLabelEn}</div>
           </div>
-          <div>: {data.gasLevelPpm ?? 0} ppm</div>
+          <div>: {data.gasLevelPpm != null ? `${data.gasLevelPpm} ppm` : ""}</div>
         </div>
 
         {/* Signer Block */}

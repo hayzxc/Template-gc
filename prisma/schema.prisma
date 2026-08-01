@@ -27,7 +27,7 @@ model GasClearanceCertificate {
   fumigationArea         String
   commencingAt           DateTime?
   completedAt            DateTime?
-  gasLevelPpm            Decimal
+  gasLevelPpm            Decimal?
   fumigatorName          String
   fumigatorSignatureUrl  String?
   createdAt              DateTime @default(now())

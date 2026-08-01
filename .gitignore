@@ -36,3 +36,6 @@ Template GC.docx
 .agents/
 .claude/
 .windsurf/
+
+.vercel
+.env*

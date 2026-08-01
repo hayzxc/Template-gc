@@ -34,7 +34,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
       fumigationArea: "",
       commencingAt: undefined,
       completedAt: undefined,
-      gasLevelPpm: 0,
+      gasLevelPpm: undefined,
       fumigatorName: "",
       fumigatorSignatureUrl: "",
     },
@@ -161,7 +161,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
       </div>
 
       <div>
-        <label className="block font-medium text-gray-700">Konsentrasi Gas (ppm) / Gas Levels *</label>
+        <label className="block font-medium text-gray-700">Konsentrasi Gas (ppm) / Gas Levels</label>
         <input
           type="number"
           step="any"

@@ -291,7 +291,9 @@ export const CertificateDocument: React.FC<CertificateDocumentProps> = ({ data, 
         <View style={styles.gasRow}>
           <Text style={[styles.idText, styles.gasLabelId]}>{TEXT.gasLabelId}</Text>
           <Text style={[styles.enText, styles.gasLabelEn]}>{TEXT.gasLabelEn}</Text>
-          <Text style={styles.gasValue}>: {data.gasLevelPpm} ppm</Text>
+          <Text style={styles.gasValue}>
+            : {data.gasLevelPpm != null ? `${data.gasLevelPpm} ppm` : ""}
+          </Text>
         </View>
 
         {/* Fumigation company signer */}

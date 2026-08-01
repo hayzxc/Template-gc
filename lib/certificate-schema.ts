@@ -8,6 +8,14 @@ const optionalDate = z
     return isNaN(d.getTime()) ? null : d;
   });
 
+const optionalNumber = z
+  .union([z.number(), z.string(), z.null(), z.undefined()])
+  .transform((val): number | null => {
+    if (val === "" || val === null || val === undefined) return null;
+    const n = Number(val);
+    return isNaN(n) ? null : n;
+  });
+
 export const baseCertificateSchema = z.object({
   certificateDate: z.coerce.date(),
   commodity: z.string().min(1).max(1000),
@@ -16,7 +24,7 @@ export const baseCertificateSchema = z.object({
   fumigationArea: z.string().min(1).max(1000),
   commencingAt: optionalDate,
   completedAt: optionalDate,
-  gasLevelPpm: z.coerce.number().min(0),
+  gasLevelPpm: optionalNumber,
   fumigatorName: z.string().min(1).max(200),
   fumigatorSignatureUrl: z.string().url().optional().or(z.literal("")),
 });
