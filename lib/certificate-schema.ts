@@ -25,7 +25,7 @@ export const baseCertificateSchema = z.object({
   commencingAt: optionalDate,
   completedAt: optionalDate,
   gasLevelPpm: optionalNumber,
-  fumigatorName: z.string().min(1).max(200),
+  fumigatorName: z.string().max(200).optional().or(z.literal("")),
   fumigatorSignatureUrl: z.string().url().optional().or(z.literal("")),
 });
 

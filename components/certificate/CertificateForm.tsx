@@ -175,7 +175,7 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
       </div>
 
       <div>
-        <label className="block font-medium text-gray-700">Nama Fumigator / Fumigator Name *</label>
+        <label className="block font-medium text-gray-700">Nama Fumigator / Fumigator Name</label>
         <input
           type="text"
           {...register("fumigatorName")}

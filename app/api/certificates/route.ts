@@ -34,7 +34,10 @@ export async function POST(request: Request) {
     }
 
     const record = await prisma.gasClearanceCertificate.create({
-      data: result.data,
+      data: {
+        ...result.data,
+        fumigatorName: result.data.fumigatorName ?? "",
+      },
     });
     
     return NextResponse.json(record, { status: 201 });
