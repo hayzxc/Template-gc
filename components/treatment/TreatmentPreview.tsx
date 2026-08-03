@@ -111,6 +111,32 @@ export const TreatmentPreview = React.memo(function TreatmentPreview({ data }: T
     }
   };
 
+  const handleDownloadDocx = async () => {
+    try {
+      const res = await fetch("/api/treatment-certificates/docx", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(previewData),
+      });
+
+      if (!res.ok) throw new Error("Failed to generate DOCX");
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const safeName = previewData.certificateNo && previewData.certificateNo.trim()
+        ? previewData.certificateNo.trim().replace(/[^a-zA-Z0-9_-]/g, "_")
+        : "Treatment_Certificate";
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${safeName}.docx`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error("Failed to generate DOCX download", err);
+      alert("Failed to generate DOCX file");
+    }
+  };
+
   return (
     <div className="h-[760px] rounded-lg border border-gray-200 overflow-hidden bg-gray-100 flex flex-col">
       {/* Mode Switcher Bar */}
@@ -139,7 +165,15 @@ export const TreatmentPreview = React.memo(function TreatmentPreview({ data }: T
             📄 PDF View
           </button>
         </div>
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2">
+          <button
+            type="button"
+            onClick={handleDownloadDocx}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-3 py-1.5 rounded-md text-xs transition-colors flex items-center space-x-1"
+            title="Download Word (.docx) file"
+          >
+            <span>📥 Download DOCX</span>
+          </button>
           <button
             type="button"
             onClick={handleDownloadPdf}
