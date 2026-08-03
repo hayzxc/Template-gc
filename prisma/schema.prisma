@@ -41,3 +41,50 @@ model CompanyAsset {
   logoImageUrl  String
   updatedAt     DateTime @updatedAt
 }
+
+model TreatmentCertificate {
+  id                     String    @id @default(cuid())
+  // Header
+  serialNo               String?
+  dateIssued             DateTime?
+  certificateNo          String?
+  treatmentProviderId    String?
+  // Consignment details
+  relatedDocumentNo      String?
+  containers             String?
+  consigneeName          String?
+  consigneeAddress       String?
+  notifyParty            String?
+  sealNumbers            String?
+  carrierVessel          String?
+  clientName             String?
+  clientAddress          String?
+  commodity              String?
+  countryOfOrigin        String?
+  destinationCountry     String?
+  portOfLoading          String?
+  portOfUnloading        String?
+  targetOfFumigation     String?
+  enclosureType          String?
+  // Treatment schedule (prescribed/specified)
+  doseRate               Decimal?
+  exposurePeriod         Decimal?
+  scheduleTemperature    Decimal?
+  // Fumigation details (treatment applied)
+  appliedDose            Decimal?
+  appliedExposurePeriod  Decimal?
+  appliedTemperature     Decimal?
+  // Fumigation location & timing
+  placeOfFumigation      String?
+  commencedAt            DateTime?
+  completedAt            DateTime?
+  finalTlvPpm            Decimal?
+  // Signatory
+  fullName               String?
+  accreditationNumber    String?
+  signatureDate          DateTime?
+  signatureUrl           String?
+  // Timestamps
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+}

@@ -8,14 +8,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <h1 className="text-xl font-bold text-gray-900">
-              Gas Clearance Certificate Drafts
+              Certificate Drafts
             </h1>
             <nav className="flex space-x-4">
               <Link
                 href="/certificates"
                 className="text-gray-600 hover:text-gray-900 font-medium text-sm"
               >
-                Drafts
+                GC Drafts
+              </Link>
+              <Link
+                href="/treatment-certificates"
+                className="text-gray-600 hover:text-gray-900 font-medium text-sm"
+              >
+                MB Treatment
               </Link>
               <Link
                 href="/settings"
@@ -33,3 +39,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+
