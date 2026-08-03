@@ -32,13 +32,17 @@ export default function NewCertificatePage() {
     }
   };
 
+  const handlePreviewChange = React.useCallback((data: Partial<CertificateInput>) => {
+    setPreviewData(data);
+  }, []);
+
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gray-900">New Certificate Draft</h2>
 
       <div className="bg-white p-6 rounded-lg border shadow-sm flex">
         <div className="flex-1 pr-6 border-r">
-          <CertificateForm onSubmit={handleSubmit} onChange={setPreviewData} isLoading={isLoading} />
+          <CertificateForm onSubmit={handleSubmit} onChange={handlePreviewChange} isLoading={isLoading} />
         </div>
         <div className="flex-1 pl-6">
           <CertificatePreview data={previewData} />

@@ -16,7 +16,7 @@ interface CertificateFormProps {
 
 type CertificateFormValues = z.input<typeof certificateSchema>;
 
-export const CertificateForm: React.FC<CertificateFormProps> = ({
+export const CertificateForm: React.FC<CertificateFormProps> = React.memo(({
   initialValues,
   onSubmit,
   onChange,
@@ -204,4 +204,6 @@ export const CertificateForm: React.FC<CertificateFormProps> = ({
       </button>
     </form>
   );
-};
+});
+
+CertificateForm.displayName = "CertificateForm";

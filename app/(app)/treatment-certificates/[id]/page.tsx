@@ -45,6 +45,10 @@ export default function EditTreatmentCertificatePage({ params }: { params: Promi
     return <div>Loading...</div>;
   }
 
+  const handlePreviewChange = React.useCallback((data: Partial<TreatmentCertificateInput>) => {
+    setPreviewData(data);
+  }, []);
+
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gray-900">Edit Treatment Certificate Draft</h2>
@@ -54,7 +58,7 @@ export default function EditTreatmentCertificatePage({ params }: { params: Promi
           <TreatmentForm
             initialValues={initialData}
             onSubmit={handleSubmit}
-            onChange={setPreviewData}
+            onChange={handlePreviewChange}
             isLoading={isLoading}
           />
         </div>

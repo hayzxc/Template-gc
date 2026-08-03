@@ -32,6 +32,10 @@ export default function NewTreatmentCertificatePage() {
     }
   };
 
+  const handlePreviewChange = React.useCallback((data: Partial<TreatmentCertificateInput>) => {
+    setPreviewData(data);
+  }, []);
+
   return (
     <div className="space-y-6">
       <h2 className="text-2xl font-bold text-gray-900">New Treatment Certificate Draft</h2>
@@ -40,7 +44,7 @@ export default function NewTreatmentCertificatePage() {
         <div className="flex-1 pr-6 border-r overflow-y-auto max-h-[800px]">
           <TreatmentForm
             onSubmit={handleSubmit}
-            onChange={setPreviewData}
+            onChange={handlePreviewChange}
             isLoading={isLoading}
           />
         </div>

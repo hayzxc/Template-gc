@@ -75,16 +75,17 @@ const toPreviewData = (data: Partial<TreatmentCertificateInput>): TreatmentCerti
   signatureUrl: data.signatureUrl || "",
 });
 
-export function TreatmentPreview({ data }: TreatmentPreviewProps) {
+export const TreatmentPreview = React.memo(function TreatmentPreview({ data }: TreatmentPreviewProps) {
   const [mode, setMode] = useState<"live" | "pdf">("live");
-  const [debouncedData, setDebouncedData] = useState(data);
+  const deferredData = React.useDeferredValue(data);
+  const [debouncedData, setDebouncedData] = useState(deferredData);
 
   useEffect(() => {
-    const timer = setTimeout(() => setDebouncedData(data), 500);
+    const timer = setTimeout(() => setDebouncedData(deferredData), 500);
     return () => clearTimeout(timer);
-  }, [data]);
+  }, [deferredData]);
 
-  const previewData = toPreviewData(data);
+  const previewData = toPreviewData(deferredData);
 
   const handleDownloadPdf = async () => {
     try {
@@ -167,4 +168,6 @@ export function TreatmentPreview({ data }: TreatmentPreviewProps) {
       </div>
     </div>
   );
-}
+});
+
+TreatmentPreview.displayName = "TreatmentPreview";

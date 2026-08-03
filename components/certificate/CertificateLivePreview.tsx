@@ -23,7 +23,7 @@ const safeFormatDate = (d: Date | string | null | undefined, fmtStr: string) => 
   }
 };
 
-export const CertificateLivePreview: React.FC<CertificateLivePreviewProps> = ({
+export const CertificateLivePreview: React.FC<CertificateLivePreviewProps> = React.memo(({
   data,
   logoUrl,
   stampUrl,
@@ -167,4 +167,6 @@ export const CertificateLivePreview: React.FC<CertificateLivePreviewProps> = ({
       </div>
     </div>
   );
-};
+});
+
+CertificateLivePreview.displayName = "CertificateLivePreview";

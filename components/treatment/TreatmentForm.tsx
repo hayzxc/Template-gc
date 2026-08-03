@@ -29,7 +29,7 @@ const formatDateTimeForInput = (d?: Date | string | null) => {
   return date.toISOString().slice(0, 16);
 };
 
-export const TreatmentForm: React.FC<TreatmentFormProps> = ({
+export const TreatmentForm: React.FC<TreatmentFormProps> = React.memo(({
   initialValues,
   onSubmit,
   onChange,
@@ -300,4 +300,6 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({
       </button>
     </form>
   );
-};
+});
+
+TreatmentForm.displayName = "TreatmentForm";

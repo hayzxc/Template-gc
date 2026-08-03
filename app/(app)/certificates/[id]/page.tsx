@@ -45,6 +45,10 @@ export default function EditCertificatePage({ params }: { params: Promise<{ id: 
     return <div>Loading...</div>;
   }
 
+  const handlePreviewChange = React.useCallback((data: Partial<CertificateInput>) => {
+    setPreviewData(data);
+  }, []);
+
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -61,7 +65,7 @@ export default function EditCertificatePage({ params }: { params: Promise<{ id: 
 
       <div className="bg-white p-6 rounded-lg border shadow-sm flex">
         <div className="flex-1 pr-6 border-r">
-          <CertificateForm initialValues={initialData} onSubmit={handleSubmit} onChange={setPreviewData} isLoading={isLoading} />
+          <CertificateForm initialValues={initialData} onSubmit={handleSubmit} onChange={handlePreviewChange} isLoading={isLoading} />
         </div>
         <div className="flex-1 pl-6">
           <CertificatePreview data={previewData} />

@@ -31,7 +31,7 @@ const fmtUnit = (v: number | null | undefined, unit: string): string => {
   return `${v} ${unit}`;
 };
 
-export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = ({ data }) => {
+export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.memo(({ data }) => {
   const dateIssued = safeFmt(data.dateIssued, "dd/MM/yyyy");
   const commencedStr = safeFmt(data.commencedAt, "dd/MM/yyyy – HH:mm");
   const completedStr = safeFmt(data.completedAt, "dd/MM/yyyy – HH:mm");
@@ -311,4 +311,6 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = ({ data
       </div>
     </div>
   );
-};
+});
+
+TreatmentLivePreview.displayName = "TreatmentLivePreview";

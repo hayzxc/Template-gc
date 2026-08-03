@@ -55,15 +55,16 @@ const toPreviewData = (data: Partial<CertificateInput>): CertificateInput => ({
     fumigatorSignatureUrl: data.fumigatorSignatureUrl || undefined,
 });
 
-export function CertificatePreview({ data }: CertificatePreviewProps) {
+export const CertificatePreview = React.memo(function CertificatePreview({ data }: CertificatePreviewProps) {
     const [mode, setMode] = useState<"live" | "pdf">("live");
-    const [debouncedData, setDebouncedData] = useState(data);
+    const deferredData = React.useDeferredValue(data);
+    const [debouncedData, setDebouncedData] = useState(deferredData);
     const [assets, setAssets] = useState<{ logoImageUrl?: string; stampImageUrl?: string }>({});
 
     useEffect(() => {
-        const timer = setTimeout(() => setDebouncedData(data), 500);
+        const timer = setTimeout(() => setDebouncedData(deferredData), 500);
         return () => clearTimeout(timer);
-    }, [data]);
+    }, [deferredData]);
 
     useEffect(() => {
         fetch("/api/company-asset")
@@ -77,7 +78,7 @@ export function CertificatePreview({ data }: CertificatePreviewProps) {
             .catch(() => setAssets({}));
     }, []);
 
-    const previewData = toPreviewData(data);
+    const previewData = toPreviewData(deferredData);
 
     const handleDownloadPdf = async () => {
         try {
@@ -164,4 +165,6 @@ export function CertificatePreview({ data }: CertificatePreviewProps) {
             </div>
         </div>
     );
-}
+});
+
+CertificatePreview.displayName = "CertificatePreview";
