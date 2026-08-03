@@ -297,7 +297,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
         <div className="text-[#0A5394] font-bold text-[10.5px] mb-1 pb-0.5 border-b border-[#0A5394]">
           {TC.additionalDeclarationsHeader}
         </div>
-        <div className="border border-black min-h-[25px] p-2 text-[8px] whitespace-pre-wrap">
+        <div className="min-h-[25px] py-1 text-[8px] whitespace-pre-wrap font-normal">
           {data.additionalDeclarations || ""}
         </div>
       </div>
@@ -305,10 +305,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
       {/* Footer Rule & Text */}
       <div className="mt-2 pt-1 border-t border-black text-[7.5px] leading-tight">
         <div>
-          {TC.footerPrefix}<span className="font-serif font-bold">{TC.footerBrand}</span>
-        </div>
-        <div className="truncate">
-          {TC.footerVerify}<span className="font-serif text-blue-800 underline">eCert-1785310680-2eb9d8d4-ID0018MB-20260731</span>
+          {TC.footerPrefix}<span className="font-serif font-bold">{TC.footerBrand}</span>{TC.footerVerify}
         </div>
       </div>
     </div>

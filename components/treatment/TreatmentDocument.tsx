@@ -162,10 +162,8 @@ const s = StyleSheet.create({
   },
   // Additional declarations box
   addDeclBox: {
-    borderWidth: 0.5,
-    borderColor: TC_COLORS.border,
     minHeight: 16,
-    padding: 2,
+    paddingTop: 2,
     marginTop: 1.5,
   },
   // Footer
@@ -446,10 +444,7 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
           <Text>
             {TC.footerPrefix}
             <Text style={{ fontFamily: "Calibri", fontWeight: "bold" }}>{TC.footerBrand}</Text>
-          </Text>
-          <Text>
             {TC.footerVerify}
-            <Text style={{ color: "#0000ED", textDecoration: "underline" }}>eCert-1785310680-2eb9d8d4-ID0018MB-20260731</Text>
           </Text>
         </View>
       </Page>

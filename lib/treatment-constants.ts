@@ -66,5 +66,5 @@ export const TREATMENT_CONSTANTS = {
   // Footer text
   footerPrefix: "Printed digitally through: ",
   footerBrand: "FUMI TRUST by BARANTIN.",
-  footerVerify: "The authenticity of this document can be verified through the QRcode above or via the following link ",
+  footerVerify: " The authenticity of this document can be verified through the QRcode above.",
 } as const;
