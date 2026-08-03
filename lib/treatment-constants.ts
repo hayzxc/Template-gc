@@ -48,7 +48,7 @@ export const TREATMENT_CONSTANTS = {
   temperatureLabel: "Temperature",
   doseRateUnit: "g/m3",
   exposurePeriodUnit: "(hours)",
-  temperatureUnit: "℃",
+  temperatureUnit: "°C",
 
   // Fumigation details labels
   appliedDoseLabel: "Applied dose",

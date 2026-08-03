@@ -201,7 +201,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
                 <span className="font-bold">{TC.exposurePeriodLabel}</span> &nbsp; <span className="font-normal">{fmtUnit(data.exposurePeriod, "(hours)")}</span>
               </td>
               <td className="px-2 py-1 w-[33%]">
-                <span className="font-bold">{TC.temperatureLabel}</span> &nbsp; <span className="font-normal">{fmtUnit(data.scheduleTemperature, "℃")}</span>
+                <span className="font-bold">{TC.temperatureLabel}</span> &nbsp; <span className="font-normal">{fmtUnit(data.scheduleTemperature, TC.temperatureUnit)}</span>
               </td>
             </tr>
           </tbody>
@@ -222,7 +222,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
                 <span className="font-bold">{TC.exposurePeriodLabel}</span> &nbsp; <span className="font-normal">{fmtUnit(data.appliedExposurePeriod, "(hours)")}</span>
               </td>
               <td className="px-2 py-1 w-[33%]">
-                <span className="font-bold">{TC.temperatureLabel}</span> &nbsp; <span className="font-normal">{fmtUnit(data.appliedTemperature, "℃")}</span>
+                <span className="font-bold">{TC.temperatureLabel}</span> &nbsp; <span className="font-normal">{fmtUnit(data.appliedTemperature, TC.temperatureUnit)}</span>
               </td>
             </tr>
           </tbody>

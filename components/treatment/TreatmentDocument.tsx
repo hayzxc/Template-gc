@@ -363,7 +363,7 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
             <Text><Text style={s.cellBold}>{TC.exposurePeriodLabel}</Text>  <Text style={s.cellNormal}>{fmtUnit(data.exposurePeriod, "(hours)")}</Text></Text>
           </View>
           <View style={[{ width: "33%", padding: 1.5 }]}>
-            <Text><Text style={s.cellBold}>{TC.temperatureLabel}</Text>  <Text style={s.cellNormal}>{fmtUnit(data.scheduleTemperature, "℃")}</Text></Text>
+            <Text><Text style={s.cellBold}>{TC.temperatureLabel}</Text>  <Text style={s.cellNormal}>{fmtUnit(data.scheduleTemperature, TC.temperatureUnit)}</Text></Text>
           </View>
         </View>
 
@@ -378,7 +378,7 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
             <Text><Text style={s.cellBold}>{TC.exposurePeriodLabel}</Text>  <Text style={s.cellNormal}>{fmtUnit(data.appliedExposurePeriod, "(hours)")}</Text></Text>
           </View>
           <View style={[{ width: "33%", padding: 1.5 }]}>
-            <Text><Text style={s.cellBold}>{TC.temperatureLabel}</Text>  <Text style={s.cellNormal}>{fmtUnit(data.appliedTemperature, "℃")}</Text></Text>
+            <Text><Text style={s.cellBold}>{TC.temperatureLabel}</Text>  <Text style={s.cellNormal}>{fmtUnit(data.appliedTemperature, TC.temperatureUnit)}</Text></Text>
           </View>
         </View>
 
