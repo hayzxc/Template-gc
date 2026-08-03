@@ -81,6 +81,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = React.memo(({
       accreditationNumber: initialValues?.accreditationNumber ?? "",
       signatureDate: initialValues?.signatureDate ?? undefined,
       signatureUrl: initialValues?.signatureUrl ?? "",
+      additionalDeclarations: initialValues?.additionalDeclarations ?? "",
     },
   });
 
@@ -288,6 +289,15 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = React.memo(({
         <div>
           <label className={labelClass}>Signature Image URL</label>
           <input type="url" {...register("signatureUrl")} placeholder="https://..." className={inputClass} />
+        </div>
+      </fieldset>
+
+      {/* Additional Declarations */}
+      <fieldset className="border border-gray-200 rounded-md p-4 space-y-3">
+        <legend className="text-sm font-semibold text-gray-600 px-2">Additional Declarations</legend>
+        <div>
+          <label className={labelClass}>Additional Declarations</label>
+          <textarea rows={3} {...register("additionalDeclarations")} placeholder="Enter additional declarations if any" className={inputClass} />
         </div>
       </fieldset>
 

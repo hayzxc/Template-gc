@@ -39,6 +39,7 @@ export const treatmentCertificateSchema = z.object({
   accreditationNumber: z.string().optional().default(""),
   signatureDate: z.coerce.date().nullable().optional(),
   signatureUrl: z.string().optional().default(""),
+  additionalDeclarations: z.string().optional().default(""),
 });
 
 export type TreatmentCertificateInput = z.infer<typeof treatmentCertificateSchema>;

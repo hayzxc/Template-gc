@@ -73,6 +73,7 @@ const toPreviewData = (data: Partial<TreatmentCertificateInput>): TreatmentCerti
   accreditationNumber: data.accreditationNumber || "",
   signatureDate: toNullableDate(data.signatureDate),
   signatureUrl: data.signatureUrl || "",
+  additionalDeclarations: data.additionalDeclarations || "",
 });
 
 export const TreatmentPreview = React.memo(function TreatmentPreview({ data }: TreatmentPreviewProps) {

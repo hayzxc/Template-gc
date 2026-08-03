@@ -164,7 +164,8 @@ const s = StyleSheet.create({
   addDeclBox: {
     borderWidth: 0.5,
     borderColor: TC_COLORS.border,
-    height: 16,
+    minHeight: 16,
+    padding: 2,
     marginTop: 1.5,
   },
   // Footer
@@ -435,7 +436,9 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
 
         {/* Additional Declarations */}
         <Text style={s.sectionHeader}>{TC.additionalDeclarationsHeader}</Text>
-        <View style={s.addDeclBox} />
+        <View style={s.addDeclBox}>
+          <Text style={s.cellNormal}>{data.additionalDeclarations || ""}</Text>
+        </View>
 
         {/* Footer Rule & Text */}
         <View style={s.footerRule} fixed />

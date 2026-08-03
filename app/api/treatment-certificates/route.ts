@@ -70,6 +70,7 @@ export async function POST(request: Request) {
         accreditationNumber: data.accreditationNumber ?? "",
         signatureDate: data.signatureDate,
         signatureUrl: data.signatureUrl ?? "",
+        additionalDeclarations: data.additionalDeclarations ?? "",
       },
     });
 

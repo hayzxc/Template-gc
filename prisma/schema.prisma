@@ -84,6 +84,8 @@ model TreatmentCertificate {
   accreditationNumber    String?
   signatureDate          DateTime?
   signatureUrl           String?
+  // Additional Declarations
+  additionalDeclarations String?
   // Timestamps
   createdAt              DateTime  @default(now())
   updatedAt              DateTime  @updatedAt

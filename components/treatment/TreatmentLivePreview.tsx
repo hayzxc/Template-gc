@@ -297,7 +297,9 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
         <div className="text-[#0A5394] font-bold text-[10.5px] mb-1 pb-0.5 border-b border-[#0A5394]">
           {TC.additionalDeclarationsHeader}
         </div>
-        <div className="border border-black min-h-[25px] p-2 text-[8px]"></div>
+        <div className="border border-black min-h-[25px] p-2 text-[8px] whitespace-pre-wrap">
+          {data.additionalDeclarations || ""}
+        </div>
       </div>
 
       {/* Footer Rule & Text */}
