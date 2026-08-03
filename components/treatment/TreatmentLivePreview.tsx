@@ -106,7 +106,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = ({ data
                 {data.notifyParty && (
                   <div className="mt-1">
                     <div><span className="font-normal">{TC.notifyPartyLabel}</span></div>
-                    <div className="font-normal pl-2">{data.notifyParty}</div>
+                    <div className="font-normal whitespace-pre-wrap pl-2">{data.notifyParty}</div>
                   </div>
                 )}
               </td>

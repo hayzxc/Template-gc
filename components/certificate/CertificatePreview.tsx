@@ -112,22 +112,20 @@ export function CertificatePreview({ data }: CertificatePreviewProps) {
                     <button
                         type="button"
                         onClick={() => setMode("live")}
-                        className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
-                            mode === "live"
+                        className={`px-3 py-1.5 rounded-md font-medium transition-colors ${mode === "live"
                                 ? "bg-white text-blue-600 shadow-sm"
                                 : "text-gray-600 hover:text-gray-900"
-                        }`}
+                            }`}
                     >
                         ⚡ Live Typewriter Preview
                     </button>
                     <button
                         type="button"
                         onClick={() => setMode("pdf")}
-                        className={`px-3 py-1.5 rounded-md font-medium transition-colors ${
-                            mode === "pdf"
+                        className={`px-3 py-1.5 rounded-md font-medium transition-colors ${mode === "pdf"
                                 ? "bg-white text-blue-600 shadow-sm"
                                 : "text-gray-600 hover:text-gray-900"
-                        }`}
+                            }`}
                     >
                         📄 PDF View
                     </button>

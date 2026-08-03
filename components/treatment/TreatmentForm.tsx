@@ -151,7 +151,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = ({
         </div>
         <div>
           <label className={labelClass}>Notify Party</label>
-          <input type="text" {...register("notifyParty")} placeholder="e.g. SAME AS CONSIGNEE" className={inputClass} />
+          <textarea rows={3} {...register("notifyParty")} placeholder="e.g. SAME AS CONSIGNEE" className={inputClass} />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <div>
