@@ -11,15 +11,27 @@ export default function EditCertificatePage({ params }: { params: Promise<{ id: 
   const [initialData, setInitialData] = useState<Partial<CertificateInput> | null>(null);
   const [previewData, setPreviewData] = useState<Partial<CertificateInput>>({});
   const [isLoading, setIsLoading] = useState(false);
+  const [notFound, setNotFound] = useState(false);
 
   useEffect(() => {
     fetch(`/api/certificates/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setInitialData(data);
-        setPreviewData(data);
+      .then(async (res) => {
+        if (!res.ok) {
+          setNotFound(true);
+          return;
+        }
+        const data = await res.json();
+        if (data.error) {
+          setNotFound(true);
+        } else {
+          setInitialData(data);
+          setPreviewData(data);
+        }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => {
+        console.error(err);
+        setNotFound(true);
+      });
   }, [id]);
 
   const handleSubmit = async (data: CertificateInput) => {
@@ -41,8 +53,20 @@ export default function EditCertificatePage({ params }: { params: Promise<{ id: 
     }
   };
 
+  if (notFound) {
+    return (
+      <div className="p-8 bg-white rounded-lg border text-center space-y-4">
+        <h2 className="text-xl font-semibold text-gray-800">Draft Gas Clearance Certificate Tidak Ditemukan</h2>
+        <p className="text-sm text-gray-500">Draft dengan ID "{id}" tidak ditemukan di database.</p>
+        <a href="/certificates" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-md text-sm">
+          Kembali ke Daftar Draft
+        </a>
+      </div>
+    );
+  }
+
   if (!initialData) {
-    return <div>Loading...</div>;
+    return <div className="p-8 text-gray-500">Memuat data draft...</div>;
   }
 
   const handlePreviewChange = React.useCallback((data: Partial<CertificateInput>) => {
