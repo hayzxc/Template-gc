@@ -3,12 +3,12 @@
 // This file is the single home for certificate layout constants (AGENTS.md rule 5).
 
 export const PAGE = {
-  size: "A4" as const, // A4 page dimensions (595.28 x 841.89 pt)
+  size: "A5" as const, // w:pgSz 8400 x 11900 twips = 420 x 595 pt
   paddingTop: 19, // w:pgMar top 380
   paddingBottom: 48, // w:pgMar bottom 960
   paddingLeft: 14.15, // w:pgMar left 283
   paddingRight: 14.15, // w:pgMar right 283
-  contentWidth: 567, // 595 - 2*14.15 pt
+  contentWidth: 391.7, // 8400 - 2*283 twips
 };
 
 export const FONTS = {

@@ -38,7 +38,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
   const sigDate = safeFmt(data.signatureDate, "dd/MM/yyyy");
 
   return (
-    <div className="w-[595px] min-h-[842px] bg-white text-black font-['Calibri',sans-serif] text-[7.5pt] leading-[1.25] p-[16pt_14pt_16pt_14pt] box-border relative shadow-lg rounded select-none mx-auto flex flex-col border border-gray-300 overflow-hidden justify-between">
+    <div className="w-[420px] min-h-[595px] bg-white text-black font-['Calibri',sans-serif] text-[6pt] leading-[1.2] p-[12pt_10pt_12pt_10pt] box-border relative shadow-lg rounded select-none mx-auto flex flex-col border border-gray-300 overflow-hidden justify-between">
       <div>
         {/* Company Letterhead Image (Omitted if hideLetterhead is true) */}
         {!data.hideLetterhead && (
