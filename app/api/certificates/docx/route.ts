@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { generateCertificateDocx } from "@/lib/docx-generator";
 import { certificateSchema } from "@/lib/certificate-schema";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   try {
     const json = await request.json();

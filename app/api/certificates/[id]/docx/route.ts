@@ -3,6 +3,8 @@ import { prisma } from "@/lib/prisma";
 import { generateCertificateDocx } from "@/lib/docx-generator";
 import { certificateSchema } from "@/lib/certificate-schema";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
@@ -28,7 +30,7 @@ export async function GET(
       ? cert.containerNumber.trim().replace(/[^a-zA-Z0-9_-]/g, "_")
       : "Gas_Clearance_Certificate";
 
-    return new NextResponse(Uint8Array.from(docxBuffer), {
+    return new NextResponse(docxBuffer as unknown as BodyInit, {
       status: 200,
       headers: {
         "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",

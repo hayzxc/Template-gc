@@ -4,6 +4,8 @@ import React from "react";
 import { prisma } from "@/lib/prisma";
 import { CertificateDocument } from "@/components/certificate/CertificateDocument";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
