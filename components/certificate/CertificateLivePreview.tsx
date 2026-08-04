@@ -43,7 +43,7 @@ export const CertificateLivePreview: React.FC<CertificateLivePreviewProps> = Rea
   ];
 
   return (
-    <div className="w-[420px] min-h-[595px] bg-white text-black font-sans text-[8.5px] leading-[1.15] p-[16pt_14pt_36pt_14pt] box-border relative shadow-lg rounded select-none mx-auto flex flex-col justify-between overflow-hidden border border-gray-300">
+    <div className="w-[595px] min-h-[842px] bg-white text-black font-sans text-[9.5px] leading-[1.2] p-[20pt_18pt_40pt_18pt] box-border relative shadow-lg rounded select-none mx-auto flex flex-col justify-between overflow-hidden border border-gray-300">
       <div>
         {/* Letterhead */}
         <div className="h-[36px] mb-1">

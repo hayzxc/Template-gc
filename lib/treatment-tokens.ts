@@ -3,12 +3,12 @@
 // All values are PDF points (1 pt = 20 twips).
 
 export const TC_PAGE = {
-  size: "A5" as const,
+  size: "A4" as const,
   paddingTop: 25,
   paddingBottom: 14,
   paddingLeft: 7.05,
   paddingRight: 7.05,
-  contentWidth: 405.9,
+  contentWidth: 580,
 };
 
 export const TC_FONTS = {
