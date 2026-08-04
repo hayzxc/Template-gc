@@ -1,9 +1,25 @@
 import { z } from "zod";
 
+const optionalDate = z
+  .union([z.date(), z.string(), z.null(), z.undefined()])
+  .transform((val): Date | null => {
+    if (!val || val === "") return null;
+    const d = val instanceof Date ? val : new Date(String(val));
+    return isNaN(d.getTime()) ? null : d;
+  });
+
+const optionalNumber = z
+  .union([z.number(), z.string(), z.null(), z.undefined()])
+  .transform((val): number | null => {
+    if (val === "" || val === null || val === undefined) return null;
+    const n = Number(val);
+    return isNaN(n) ? null : n;
+  });
+
 export const treatmentCertificateSchema = z.object({
   hideLetterhead: z.boolean().optional().default(false),
   serialNo: z.string().optional().default(""),
-  dateIssued: z.coerce.date().nullable().optional(),
+  dateIssued: optionalDate,
   certificateNo: z.string().optional().default(""),
   treatmentProviderId: z.string().optional().default("ID0018MB"),
   relatedDocumentNo: z.string().optional().default(""),
@@ -25,19 +41,19 @@ export const treatmentCertificateSchema = z.object({
   portOfUnloading: z.string().optional().default(""),
   targetOfFumigation: z.string().optional().default(""),
   enclosureType: z.string().optional().default(""),
-  doseRate: z.coerce.number().nullable().optional(),
-  exposurePeriod: z.coerce.number().nullable().optional(),
-  scheduleTemperature: z.coerce.number().nullable().optional(),
-  appliedDose: z.coerce.number().nullable().optional(),
-  appliedExposurePeriod: z.coerce.number().nullable().optional(),
-  appliedTemperature: z.coerce.number().nullable().optional(),
+  doseRate: optionalNumber,
+  exposurePeriod: optionalNumber,
+  scheduleTemperature: optionalNumber,
+  appliedDose: optionalNumber,
+  appliedExposurePeriod: optionalNumber,
+  appliedTemperature: optionalNumber,
   placeOfFumigation: z.string().optional().default(""),
-  commencedAt: z.coerce.date().nullable().optional(),
-  completedAt: z.coerce.date().nullable().optional(),
-  finalTlvPpm: z.coerce.number().nullable().optional(),
+  commencedAt: optionalDate,
+  completedAt: optionalDate,
+  finalTlvPpm: optionalNumber,
   fullName: z.string().optional().default(""),
   accreditationNumber: z.string().optional().default(""),
-  signatureDate: z.coerce.date().nullable().optional(),
+  signatureDate: optionalDate,
   signatureUrl: z.string().optional().default(""),
   additionalDeclarations: z.string().optional().default(""),
 });
