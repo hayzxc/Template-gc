@@ -33,70 +33,70 @@ if (typeof window !== "undefined") {
 
 const s = StyleSheet.create({
   page: {
-    paddingTop: 15,
-    paddingBottom: 12,
-    paddingLeft: TC_PAGE.paddingLeft,
-    paddingRight: TC_PAGE.paddingRight,
+    paddingTop: 24,
+    paddingBottom: 24,
+    paddingLeft: 20,
+    paddingRight: 20,
     fontFamily: "Calibri",
-    fontSize: 6,
+    fontSize: 8.5,
   },
   // Letterhead Image (Proportional ~6.32 : 1 aspect ratio)
   letterheadImage: {
     width: "100%",
-    height: 64,
+    height: 84,
     objectFit: "contain" as const,
-    marginLeft: 4,
-    marginBottom: 4,
+    marginLeft: 0,
+    marginBottom: 6,
   },
   // Top right header container (Stacked vertically)
   headerContainer: {
     alignItems: "flex-end",
-    marginBottom: 2,
+    marginBottom: 4,
   },
   headerLine: {
     flexDirection: "row",
     alignItems: "baseline",
-    marginBottom: 0.5,
+    marginBottom: 1,
   },
   headerLabel: {
-    fontSize: 6,
+    fontSize: 8.5,
     fontFamily: "Calibri",
   },
   headerSubLabel: {
-    fontSize: 5,
+    fontSize: 7,
     color: "#555555",
     fontFamily: "Calibri",
   },
   headerValueBold: {
     fontFamily: "Calibri",
     fontWeight: "bold",
-    fontSize: 6,
-    marginLeft: 3,
+    fontSize: 8.5,
+    marginLeft: 4,
   },
   headerValue: {
-    fontSize: 6,
+    fontSize: 8.5,
     fontFamily: "Calibri",
-    marginLeft: 3,
+    marginLeft: 4,
   },
   // Title
   titleText: {
     fontFamily: "Calibri",
     fontWeight: "bold",
-    fontSize: 8.5,
+    fontSize: 12,
     color: TC_COLORS.sectionBlue,
     textDecoration: "underline",
-    marginBottom: 2,
+    marginBottom: 4,
   },
   // Section heading
   sectionHeader: {
     fontFamily: "Calibri",
     fontWeight: "bold",
-    fontSize: 7.5,
+    fontSize: 10.5,
     color: TC_COLORS.sectionBlue,
-    marginTop: 3,
-    marginBottom: 1,
-    paddingTop: 1,
-    paddingBottom: 0.5,
+    marginTop: 6,
+    marginBottom: 2,
+    paddingTop: 2,
+    paddingBottom: 1,
     borderTopWidth: 1,
     borderTopColor: "#000000",
     borderBottomWidth: 0.5,
@@ -105,15 +105,15 @@ const s = StyleSheet.create({
   // Table 1 (Black header)
   table1HeaderCell: {
     backgroundColor: TC_COLORS.table1HeaderBg,
-    paddingVertical: 1.5,
-    paddingHorizontal: 3,
+    paddingVertical: 3,
+    paddingHorizontal: 5,
     borderRightWidth: 0.5,
     borderRightColor: TC_COLORS.border,
   },
   table1HeaderText: {
     fontFamily: "Calibri",
     fontWeight: "bold",
-    fontSize: 6,
+    fontSize: 8.5,
     color: TC_COLORS.table1HeaderText,
   },
   // General table
@@ -129,12 +129,12 @@ const s = StyleSheet.create({
   cellBold: {
     fontFamily: "Calibri",
     fontWeight: "bold",
-    fontSize: 6,
+    fontSize: 8.5,
   },
   cellNormal: {
     fontFamily: "Calibri",
     fontWeight: "normal",
-    fontSize: 6,
+    fontSize: 8.5,
   },
   // Table 3 & 4 Gray Background
   tableGrayRow: {
@@ -146,43 +146,43 @@ const s = StyleSheet.create({
   // Declaration text
   declarationText: {
     fontFamily: "Calibri",
-    fontSize: 6,
-    marginBottom: 0.5,
-    lineHeight: 1.1,
+    fontSize: 8.5,
+    marginBottom: 1,
+    lineHeight: 1.15,
   },
   declarationIndent: {
     fontFamily: "Calibri",
-    fontSize: 6,
-    marginBottom: 0.5,
-    lineHeight: 1.1,
-    paddingLeft: 8,
+    fontSize: 8.5,
+    marginBottom: 1,
+    lineHeight: 1.15,
+    paddingLeft: 12,
   },
   // Signature image
   signatureImage: {
-    width: 60,
-    height: 20,
+    width: 85,
+    height: 28,
     objectFit: "contain" as const,
   },
   // Additional declarations box
   addDeclBox: {
-    minHeight: 16,
-    paddingTop: 2,
-    marginTop: 1.5,
+    minHeight: 24,
+    paddingTop: 3,
+    marginTop: 2,
   },
   // Footer
   footerRule: {
     position: "absolute",
-    left: TC_PAGE.paddingLeft,
-    bottom: 16,
-    width: TC_PAGE.contentWidth,
+    left: 20,
+    bottom: 24,
+    right: 20,
     height: 0.5,
     backgroundColor: "#000000",
   },
   footerText: {
     position: "absolute",
-    left: TC_PAGE.paddingLeft,
-    bottom: 6,
-    fontSize: 5,
+    left: 20,
+    bottom: 10,
+    fontSize: 7,
     lineHeight: 1.1,
     fontFamily: "Calibri",
   },
@@ -221,7 +221,7 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
 
   return (
     <Document>
-      <Page size={TC_PAGE.size} style={s.page} wrap={false}>
+      <Page size="A4" style={s.page} wrap={false}>
         {/* Company Letterhead Image (Omitted if hideLetterhead is true) */}
         {!data.hideLetterhead && (
           <Image
