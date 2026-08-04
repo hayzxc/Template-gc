@@ -93,11 +93,14 @@ const s = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 7.5,
     color: TC_COLORS.sectionBlue,
-    marginTop: 2,
+    marginTop: 3,
     marginBottom: 1,
+    paddingTop: 1,
+    paddingBottom: 0.5,
+    borderTopWidth: 1,
+    borderTopColor: "#000000",
     borderBottomWidth: 0.5,
     borderBottomColor: TC_COLORS.sectionBlue,
-    paddingBottom: 0.5,
   },
   // Table 1 (Black header)
   table1HeaderCell: {

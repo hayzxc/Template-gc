@@ -87,7 +87,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
         </table>
 
         {/* Section: Consignment details */}
-        <div className="text-[#0A5394] font-bold text-[10.5px] mb-1 pb-0.5 border-b border-[#0A5394]">
+        <div className="text-[#0A5394] font-bold text-[10.5px] mt-1.5 mb-1 pt-0.5 pb-0.5 border-t border-b border-[#0A5394] border-t-black">
           {TC.consignmentDetailsHeader}
         </div>
 
