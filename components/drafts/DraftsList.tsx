@@ -43,82 +43,106 @@ export function DraftsList() {
   }, []);
 
   if (isLoading) {
-    return <div className="p-4 text-gray-500">Loading drafts...</div>;
+    return (
+      <div className="space-y-3">
+        {[1, 2, 3].map((i) => (
+          <div key={i} className="bg-white rounded-xl border border-gray-100 p-4 animate-pulse">
+            <div className="h-4 bg-gray-100 rounded w-3/4 mb-3" />
+            <div className="flex gap-4">
+              <div className="h-3 bg-gray-100 rounded w-24" />
+              <div className="h-3 bg-gray-100 rounded w-20" />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   }
 
   if (errorMessage) {
     return (
-      <div className="p-4 text-red-600 bg-red-50 border border-red-200 rounded-md">
-        <p className="font-semibold">Error loading certificate drafts:</p>
-        <p className="text-sm mt-1">{errorMessage}</p>
-        <p className="text-xs text-gray-500 mt-2">
-          Make sure your database connection string (DATABASE_URL) is set up in Vercel environment variables.
-        </p>
+      <div className="p-5 text-red-600 bg-red-50/80 border border-red-100 rounded-xl">
+        <p className="font-semibold text-sm">Error loading certificate drafts</p>
+        <p className="text-sm mt-1 text-red-500">{errorMessage}</p>
       </div>
     );
   }
 
   if (drafts.length === 0) {
-    return <div className="p-4 text-gray-500">No certificate drafts found.</div>;
+    return (
+      <div className="text-center py-16">
+        <div className="text-4xl mb-3">📄</div>
+        <p className="text-gray-400 text-sm">Belum ada draft Gas Clearance Certificate.</p>
+        <Link
+          href="/certificates/new"
+          className="inline-block mt-4 text-sm text-blue-600 hover:text-blue-700 font-medium"
+        >
+          + Buat Draft Baru
+        </Link>
+      </div>
+    );
   }
 
   return (
-    <div className="overflow-x-auto border rounded-lg">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
-          <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Commodity / Article
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Container Number
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Certificate Date
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Last Updated
-            </th>
-            <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-              Actions
-            </th>
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200 text-sm">
-          {drafts.map((draft) => (
-            <tr key={draft.id} className="hover:bg-gray-50">
-              <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">
-                {draft.commodity}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-gray-500">
-                {draft.containerNumber}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-gray-500">
-                {draft.certificateDate ? format(new Date(draft.certificateDate), "dd/MM/yyyy") : "-"}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-gray-500">
-                {format(new Date(draft.updatedAt), "dd/MM/yyyy HH:mm")}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-3">
-                <Link
-                  href={`/certificates/${draft.id}`}
-                  className="text-blue-600 hover:text-blue-900"
-                >
-                  Edit
-                </Link>
-                <a
-                  href={`/api/certificates/${draft.id}/pdf`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-green-600 hover:text-green-900"
-                >
-                  Export PDF
-                </a>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div className="space-y-2.5">
+      {drafts.map((draft) => (
+        <div
+          key={draft.id}
+          className="group bg-white rounded-xl border border-gray-100 hover:border-gray-200 hover:shadow-sm transition-all duration-150 px-5 py-4"
+        >
+          <div className="flex items-start justify-between gap-4">
+            {/* Left: Content */}
+            <div className="flex-1 min-w-0">
+              <p className="text-[13.5px] font-medium text-gray-800 leading-snug line-clamp-2">
+                {draft.commodity || <span className="text-gray-300 italic">No commodity</span>}
+              </p>
+              <div className="flex items-center gap-3 mt-2 text-xs text-gray-400">
+                {draft.containerNumber && (
+                  <span className="inline-flex items-center gap-1">
+                    <span className="text-gray-300">📦</span>
+                    {draft.containerNumber}
+                  </span>
+                )}
+                {draft.certificateDate && (
+                  <span className="inline-flex items-center gap-1">
+                    <span className="text-gray-300">📅</span>
+                    {format(new Date(draft.certificateDate), "dd/MM/yyyy")}
+                  </span>
+                )}
+                <span className="inline-flex items-center gap-1">
+                  <span className="text-gray-300">🕐</span>
+                  {format(new Date(draft.updatedAt), "dd/MM/yyyy HH:mm")}
+                </span>
+              </div>
+            </div>
+
+            {/* Right: Actions */}
+            <div className="flex items-center gap-2 shrink-0 opacity-60 group-hover:opacity-100 transition-opacity">
+              <Link
+                href={`/certificates/${draft.id}`}
+                className="px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+              >
+                Edit
+              </Link>
+              <a
+                href={`/api/certificates/${draft.id}/pdf`}
+                target="_blank"
+                rel="noreferrer"
+                className="px-3 py-1.5 text-xs font-medium text-emerald-600 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors"
+              >
+                PDF
+              </a>
+              <a
+                href={`/api/certificates/${draft.id}/docx`}
+                target="_blank"
+                rel="noreferrer"
+                className="px-3 py-1.5 text-xs font-medium text-violet-600 bg-violet-50 hover:bg-violet-100 rounded-lg transition-colors"
+              >
+                DOCX
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
