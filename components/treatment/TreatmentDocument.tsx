@@ -268,9 +268,9 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
         <Text style={s.sectionHeader}>{TC.consignmentDetailsHeader}</Text>
 
         <View style={s.tableRow}>
-          <Text style={[{ width: "32%", padding: 2, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
-            {TC.consignmentLinkLabel}
-          </Text>
+          <View style={[{ width: "32%", padding: 2, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+            <Text>{TC.consignmentLinkLabel}</Text>
+          </View>
           <View style={[{ width: "68%", padding: 2 }]}>
             <Text>{TC.relatedDocumentNoLabel} <Text style={s.cellNormal}>{data.relatedDocumentNo}</Text></Text>
             <Text>{TC.containersLabel} <Text style={s.cellNormal}>{data.containers}</Text></Text>
@@ -286,28 +286,30 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
         </View>
 
         <View style={s.tableRow}>
-          <Text style={[{ width: "32%", padding: 2, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
-            {TC.sealNumbersLabel}
-          </Text>
-          <View style={[{ width: "68%", padding: 2 }]}>
+          <View style={[{ width: "32%", padding: 2, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+            <Text>{TC.sealNumbersLabel}</Text>
+          </View>
+          <View style={[{ width: "68%", padding: 2, justifyContent: "center" }]}>
             <Text>Seal numbers : <Text style={s.cellNormal}>{data.sealNumbers}</Text></Text>
             <Text>Carrier/vessel : <Text style={s.cellNormal}>{data.carrierVessel}</Text></Text>
           </View>
         </View>
 
         <View style={s.tableRow}>
-          <Text style={[{ width: "32%", padding: 2, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
-            {TC.clientNameLabel}
-          </Text>
-          <Text style={[{ width: "68%", padding: 2 }, s.cellNormal]}>
-            {[data.clientName, data.clientAddress].filter(Boolean).join("\n") || " "}
-          </Text>
+          <View style={[{ width: "32%", padding: 2, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+            <Text>{TC.clientNameLabel}</Text>
+          </View>
+          <View style={[{ width: "68%", padding: 2, justifyContent: "center" }]}>
+            <Text style={s.cellNormal}>
+              {[data.clientName, data.clientAddress].filter(Boolean).join("\n") || " "}
+            </Text>
+          </View>
         </View>
 
         <View style={s.tableRow}>
-          <Text style={[{ width: "32%", padding: 2, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
-            {TC.commodityLabel}
-          </Text>
+          <View style={[{ width: "32%", padding: 2, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+            <Text>{TC.commodityLabel}</Text>
+          </View>
           <View style={[{ width: "68%", padding: 2 }]}>
             <Text style={s.cellNormal}>{data.commodity || " "}</Text>
             {(data.grossWeight || data.netWeight || data.measurement) ? (
@@ -328,19 +330,19 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
 
         {/* Combined Row: Country of origin / Destination country & Port of loading / Port of unloading */}
         <View style={s.tableRow}>
-          <View style={[{ width: "32%", padding: 1.5, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+          <View style={[{ width: "32%", padding: 1.5, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
             <Text>{TC.countryOfOriginLabel}</Text>
             <Text>{TC.destinationCountryLabel}</Text>
           </View>
-          <View style={[{ width: "20%", padding: 1.5, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }, s.cellNormal]}>
+          <View style={[{ width: "20%", padding: 1.5, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }, s.cellNormal]}>
             <Text>{data.countryOfOrigin || " "}</Text>
             <Text>{data.destinationCountry || " "}</Text>
           </View>
-          <View style={[{ width: "23%", padding: 1.5, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+          <View style={[{ width: "23%", padding: 1.5, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
             <Text>{TC.portOfLoadingLabel}</Text>
             <Text>{TC.portOfUnloadingLabel}</Text>
           </View>
-          <View style={[{ width: "25%", padding: 1.5 }, s.cellNormal]}>
+          <View style={[{ width: "25%", padding: 1.5, justifyContent: "center" }, s.cellNormal]}>
             <Text>{data.portOfLoading || " "}</Text>
             <Text>{data.portOfUnloading || " "}</Text>
           </View>
@@ -348,10 +350,18 @@ export const TreatmentDocument: React.FC<TreatmentDocumentProps> = ({ data }) =>
 
         {/* Row: Target of fumigation & Enclosure type */}
         <View style={s.tableRow}>
-          <Text style={[{ width: "32%", padding: 1.5, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>{TC.targetOfFumigationLabel}</Text>
-          <Text style={[{ width: "20%", padding: 1.5, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }, s.cellNormal]}>{data.targetOfFumigation || " "}</Text>
-          <Text style={[{ width: "23%", padding: 1.5, borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>{TC.enclosureTypeLabel}</Text>
-          <Text style={[{ width: "25%", padding: 1.5 }, s.cellNormal]}>{data.enclosureType || " "}</Text>
+          <View style={[{ width: "32%", padding: 1.5, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+            <Text>{TC.targetOfFumigationLabel}</Text>
+          </View>
+          <View style={[{ width: "20%", padding: 1.5, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }, s.cellNormal]}>
+            <Text>{data.targetOfFumigation || " "}</Text>
+          </View>
+          <View style={[{ width: "23%", padding: 1.5, justifyContent: "center", borderRightWidth: 0.5, borderRightColor: TC_COLORS.border }]}>
+            <Text>{TC.enclosureTypeLabel}</Text>
+          </View>
+          <View style={[{ width: "25%", padding: 1.5, justifyContent: "center" }, s.cellNormal]}>
+            <Text>{data.enclosureType || " "}</Text>
+          </View>
         </View>
 
         {/* Section: Treatment schedule */}

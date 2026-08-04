@@ -95,10 +95,10 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
           <tbody>
             {/* Row 1: Consignment link */}
             <tr className="border-b border-black">
-              <td className="w-[32%] px-2 py-1 font-normal align-top border-r border-black">
+              <td className="w-[32%] px-2 py-1 font-normal align-middle border-r border-black">
                 {TC.consignmentLinkLabel}
               </td>
-              <td className="w-[68%] px-2 py-1 align-top space-y-0.5">
+              <td className="w-[68%] px-2 py-1 align-middle space-y-0.5">
                 <div><span className="font-normal">{TC.relatedDocumentNoLabel}</span> <span className="font-normal">{data.relatedDocumentNo}</span></div>
                 <div><span className="font-normal">{TC.containersLabel}</span> <span className="font-normal">{data.containers}</span></div>
                 <div><span className="font-normal">{TC.consigneeLabel}</span></div>
@@ -114,10 +114,10 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
 
             {/* Row 2: Seal & Carrier */}
             <tr className="border-b border-black">
-              <td className="px-2 py-1 font-normal align-top border-r border-black">
+              <td className="px-2 py-1 font-normal align-middle border-r border-black">
                 {TC.sealNumbersLabel}
               </td>
-              <td className="px-2 py-1 align-top space-y-0.5">
+              <td className="px-2 py-1 align-middle space-y-0.5">
                 <div><span className="font-normal">Seal numbers :</span> <span className="font-normal">{data.sealNumbers}</span></div>
                 <div><span className="font-normal">Carrier/vessel :</span> <span className="font-normal">{data.carrierVessel}</span></div>
               </td>
@@ -125,10 +125,10 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
 
             {/* Row 3: Client name and address */}
             <tr className="border-b border-black">
-              <td className="px-2 py-1 font-normal align-top border-r border-black">
+              <td className="px-2 py-1 font-normal align-middle border-r border-black">
                 {TC.clientNameLabel}
               </td>
-              <td className="px-2 py-1 align-top font-normal whitespace-pre-wrap">
+              <td className="px-2 py-1 align-middle font-normal whitespace-pre-wrap">
                 {[data.clientName, data.clientAddress].filter(Boolean).join("\n") || "\u00A0"}
               </td>
             </tr>
@@ -138,7 +138,7 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
               <td className="w-[32%] px-2 py-2 font-normal align-middle border-r border-black">
                 {TC.commodityLabel}
               </td>
-              <td className="w-[68%] px-2 py-2 align-top font-normal whitespace-pre-wrap">
+              <td className="w-[68%] px-2 py-2 align-middle font-normal whitespace-pre-wrap">
                 <div>{data.commodity || "\u00A0"}</div>
                 {(data.grossWeight || data.netWeight || data.measurement) && (
                   <div className="mt-2 whitespace-pre-wrap space-y-0.5">
@@ -158,19 +158,19 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
 
             {/* Row 5: Country of Origin / Destination Country & Port of Loading / Port of Unloading */}
             <tr className="border-b border-black">
-              <td className="w-[32%] px-2 py-1 font-normal border-r border-black align-top">
+              <td className="w-[32%] px-2 py-1 font-normal border-r border-black align-middle">
                 <div>{TC.countryOfOriginLabel}</div>
                 <div>{TC.destinationCountryLabel}</div>
               </td>
-              <td className="w-[20%] px-2 py-1 font-normal border-r border-black align-top">
+              <td className="w-[20%] px-2 py-1 font-normal border-r border-black align-middle">
                 <div>{data.countryOfOrigin || "\u00A0"}</div>
                 <div>{data.destinationCountry || "\u00A0"}</div>
               </td>
-              <td className="w-[23%] px-2 py-1 font-normal border-r border-black align-top">
+              <td className="w-[23%] px-2 py-1 font-normal border-r border-black align-middle">
                 <div>{TC.portOfLoadingLabel}</div>
                 <div>{TC.portOfUnloadingLabel}</div>
               </td>
-              <td className="w-[25%] px-2 py-1 font-normal align-top">
+              <td className="w-[25%] px-2 py-1 font-normal align-middle">
                 <div>{data.portOfLoading || "\u00A0"}</div>
                 <div>{data.portOfUnloading || "\u00A0"}</div>
               </td>
@@ -178,10 +178,10 @@ export const TreatmentLivePreview: React.FC<TreatmentLivePreviewProps> = React.m
 
             {/* Row 6: Target of fumigation & Enclosure type */}
             <tr>
-              <td className="px-2 py-1 font-normal border-r border-black">{TC.targetOfFumigationLabel}</td>
-              <td className="px-2 py-1 font-normal border-r border-black">{data.targetOfFumigation || "\u00A0"}</td>
-              <td className="px-2 py-1 font-normal border-r border-black">{TC.enclosureTypeLabel}</td>
-              <td className="px-2 py-1 font-normal">{data.enclosureType || "\u00A0"}</td>
+              <td className="px-2 py-1 font-normal border-r border-black align-middle">{TC.targetOfFumigationLabel}</td>
+              <td className="px-2 py-1 font-normal border-r border-black align-middle">{data.targetOfFumigation || "\u00A0"}</td>
+              <td className="px-2 py-1 font-normal border-r border-black align-middle">{TC.enclosureTypeLabel}</td>
+              <td className="px-2 py-1 font-normal align-middle">{data.enclosureType || "\u00A0"}</td>
             </tr>
           </tbody>
         </table>
