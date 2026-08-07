@@ -2,9 +2,10 @@
 
 import React from "react";
 import { z } from "zod";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { treatmentCertificateSchema, TreatmentCertificateInput } from "@/lib/treatment-schema";
+import { CountryDropdown } from "@/components/ui/CountryDropdown";
 
 interface TreatmentFormProps {
   initialValues?: Partial<TreatmentCertificateInput>;
@@ -39,6 +40,7 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = React.memo(({
     register,
     handleSubmit,
     watch,
+    control,
     formState: { errors },
   } = useForm<TreatmentFormValues, unknown, TreatmentCertificateInput>({
     resolver: zodResolver(treatmentCertificateSchema),
@@ -184,11 +186,33 @@ export const TreatmentForm: React.FC<TreatmentFormProps> = React.memo(({
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className={labelClass}>Country of Origin</label>
-            <input type="text" {...register("countryOfOrigin")} className={inputClass} />
+            <Controller
+              name="countryOfOrigin"
+              control={control}
+              render={({ field }) => (
+                <CountryDropdown
+                  value={field.value}
+                  onChange={field.onChange}
+                  placeholder="Select country of origin..."
+                  error={errors.countryOfOrigin?.message}
+                />
+              )}
+            />
           </div>
           <div>
             <label className={labelClass}>Destination Country</label>
-            <input type="text" {...register("destinationCountry")} className={inputClass} />
+            <Controller
+              name="destinationCountry"
+              control={control}
+              render={({ field }) => (
+                <CountryDropdown
+                  value={field.value}
+                  onChange={field.onChange}
+                  placeholder="Select destination country..."
+                  error={errors.destinationCountry?.message}
+                />
+              )}
+            />
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4">
